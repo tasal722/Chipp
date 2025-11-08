@@ -96,7 +96,8 @@ begin
             -- Om pausen är tillräckligt lång så tolka bufferten som ett färdigt tecken
             if pause_counter > PAUSE_THERESHOLD and bit_count > 0 then
                 --ascii_char <=  morse_to_ascii(morse_buffer);
-                ascii_char <= morse_to_ascii(morse_buffer(morse_buffer'high downto bit_count+1) & "1" & morse_buffer(bit_count-1 downto 0));
+                --ascii_char <= morse_to_ascii(morse_buffer(morse_buffer'high downto bit_count+1) & "1" & morse_buffer(bit_count-1 downto 0));
+                ascii_char <=  morse_to_ascii(morse_buffer or std_logic_vector(shift_left(to_unsigned(1, 8), bit_count)));
                 bit_count <= 0;
                 morse_buffer <= (others => '0');
                 pause_counter <= 0;
