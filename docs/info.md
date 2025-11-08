@@ -9,12 +9,12 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works
+Push buttons in morse letters, it will then translate to ASCII 
 
 ## How to test
 
-Explain how to use your project
+Put the word you want to decode in the testprogram and it will work..
 
 ## External hardware
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+Button for input, led for output
