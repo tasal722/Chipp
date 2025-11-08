@@ -151,6 +151,370 @@ async def test_project(dut):
 
     assert dut.uo_out.value == 0x43
 
+
+    await ClockCycles(dut.clk, 60)
+
+    # # Set the input values you want to test
+    # dut.ui_in.value = 0
+    # # dut.uio_in.value = 30
+
+    # # Wait for one clock cycle to see the output values
+    # await ClockCycles(dut.clk, 2)
+    #FATIMA
+
+    dut.ui_in.value = 1
+    await ClockCycles(dut.clk, 3)  # Punkt
+    dut.ui_in.value = 0
+    await ClockCycles(dut.clk, 2)
+
+    dut.ui_in.value = 1
+    await ClockCycles(dut.clk, 3)  # Punkt
+    dut.ui_in.value = 0
+    await ClockCycles(dut.clk, 2)
+
+    dut.ui_in.value = 1
+    await ClockCycles(dut.clk, 15)  # Streck
+    dut.ui_in.value = 0
+    await ClockCycles(dut.clk, 2)
+
+    dut.ui_in.value = 1
+    await ClockCycles(dut.clk, 3)  # Punkt
+    dut.ui_in.value = 0
+    await ClockCycles(dut.clk, 60)
+
+    assert dut.uo_out.value == 0x46  # F
+
+
+    dut.ui_in.value = 1
+    await ClockCycles(dut.clk, 3)  # Punkt
+    dut.ui_in.value = 0
+    await ClockCycles(dut.clk, 2)
+
+    dut.ui_in.value = 1
+    await ClockCycles(dut.clk, 15)  # Streck
+    dut.ui_in.value = 0
+    await ClockCycles(dut.clk, 60)
+
+    assert dut.uo_out.value == 0x41  # A
+
+    dut.ui_in.value = 1
+    await ClockCycles(dut.clk, 15)  # Streck
+    dut.ui_in.value = 0
+    await ClockCycles(dut.clk, 60)
+
+    assert dut.uo_out.value == 0x54  # T
+
+    dut.ui_in.value = 1
+    await ClockCycles(dut.clk, 3)  # Punkt
+    dut.ui_in.value = 0
+    await ClockCycles(dut.clk, 2)
+
+    dut.ui_in.value = 1
+    await ClockCycles(dut.clk, 3)  # Punkt
+    dut.ui_in.value = 0
+    await ClockCycles(dut.clk, 60)
+
+    assert dut.uo_out.value == 0x49  # I
+
+    dut.ui_in.value = 1
+    await ClockCycles(dut.clk, 15)  # Streck
+    dut.ui_in.value = 0
+    await ClockCycles(dut.clk, 2)
+
+    dut.ui_in.value = 1
+    await ClockCycles(dut.clk, 15)  # Streck
+    dut.ui_in.value = 0
+    await ClockCycles(dut.clk, 60)
+
+    assert dut.uo_out.value == 0x4D  # M
+
+
+    dut.ui_in.value = 1
+    await ClockCycles(dut.clk, 3)  # Punkt
+    dut.ui_in.value = 0
+    await ClockCycles(dut.clk, 2)
+
+    dut.ui_in.value = 1
+    await ClockCycles(dut.clk, 15)  # Streck
+    dut.ui_in.value = 0
+    await ClockCycles(dut.clk, 60)
+
+    assert dut.uo_out.value == 0x41  # A
+
+    dut.ui_in.value = 1
+    await ClockCycles(dut.clk, 15)  # Streck
+    dut.ui_in.value = 0
+    await ClockCycles(dut.clk, 2)
+
+
+    #OCH
+
+
+    dut.ui_in.value = 1
+    await ClockCycles(dut.clk, 15)  # Streck
+    dut.ui_in.value = 0
+    await ClockCycles(dut.clk, 2)
+
+    dut.ui_in.value = 1
+    await ClockCycles(dut.clk, 15)  # Streck
+    dut.ui_in.value = 0
+    await ClockCycles(dut.clk, 60)
+
+    assert dut.uo_out.value == 0x4F  # O
+
+    dut.ui_in.value = 1
+    await ClockCycles(dut.clk, 15)  # Streck
+    dut.ui_in.value = 0
+    await ClockCycles(dut.clk, 2)
+
+    dut.ui_in.value = 1
+    await ClockCycles(dut.clk, 3)  # Punkt
+    dut.ui_in.value = 0
+    await ClockCycles(dut.clk, 2)
+
+    dut.ui_in.value = 1
+    await ClockCycles(dut.clk, 15)  # Streck
+    dut.ui_in.value = 0
+    await ClockCycles(dut.clk, 2)
+
+    dut.ui_in.value = 1
+    await ClockCycles(dut.clk, 3)  # Punkt
+    dut.ui_in.value = 0
+    await ClockCycles(dut.clk, 60)
+
+    assert dut.uo_out.value == 0x43  # C
+
+
+    dut.ui_in.value = 1
+    await ClockCycles(dut.clk, 3)  # Punkt
+    dut.ui_in.value = 0
+    await ClockCycles(dut.clk, 2)
+
+    dut.ui_in.value = 1
+    await ClockCycles(dut.clk, 3)  # Punkt
+    dut.ui_in.value = 0
+    await ClockCycles(dut.clk, 2)
+
+    dut.ui_in.value = 1
+    await ClockCycles(dut.clk, 3)  # Punkt
+    dut.ui_in.value = 0
+    await ClockCycles(dut.clk, 2)
+
+    dut.ui_in.value = 1
+    await ClockCycles(dut.clk, 3)  # Punkt
+    dut.ui_in.value = 0
+    await ClockCycles(dut.clk, 60)
+
+    assert dut.uo_out.value == 0x48  # H
+
+
+
+    #TASNIM
+
+    dut.ui_in.value = 1
+    await ClockCycles(dut.clk, 15)
+    dut.ui_in.value = 0
+    await ClockCycles(dut.clk, 60)
+
+    assert dut.uo_out.value == 0x54  # T
+
+    dut.ui_in.value = 1
+    await ClockCycles(dut.clk, 3)
+    dut.ui_in.value = 0
+    await ClockCycles(dut.clk, 2)
+
+    dut.ui_in.value = 1
+    await ClockCycles(dut.clk, 15)
+    dut.ui_in.value = 0
+    await ClockCycles(dut.clk, 60)
+
+    assert dut.uo_out.value == 0x41  # A
+
+
+    dut.ui_in.value = 1
+    await ClockCycles(dut.clk, 3)
+    dut.ui_in.value = 0
+    await ClockCycles(dut.clk, 2)
+
+    dut.ui_in.value = 1
+    await ClockCycles(dut.clk, 3)
+    dut.ui_in.value = 0
+    await ClockCycles(dut.clk, 2)
+
+    dut.ui_in.value = 1
+    await ClockCycles(dut.clk, 3)
+    dut.ui_in.value = 0
+    await ClockCycles(dut.clk, 60)
+
+    assert dut.uo_out.value == 0x53  # S
+
+    dut.ui_in.value = 1
+    await ClockCycles(dut.clk, 15)
+    dut.ui_in.value = 0
+    await ClockCycles(dut.clk, 2)
+
+    dut.ui_in.value = 1
+    await ClockCycles(dut.clk, 3)
+    dut.ui_in.value = 0
+    await ClockCycles(dut.clk, 60)
+
+    assert dut.uo_out.value == 0x4E  # N
+
+    dut.ui_in.value = 1
+    await ClockCycles(dut.clk, 3)
+    dut.ui_in.value = 0
+    await ClockCycles(dut.clk, 2)
+
+    dut.ui_in.value = 1
+    await ClockCycles(dut.clk, 3)
+    dut.ui_in.value = 0
+    await ClockCycles(dut.clk, 60)
+
+    assert dut.uo_out.value == 0x49  # I
+
+    dut.ui_in.value = 1
+    await ClockCycles(dut.clk, 15)
+    dut.ui_in.value = 0
+    await ClockCycles(dut.clk, 2)
+
+    dut.ui_in.value = 1
+    await ClockCycles(dut.clk, 15)
+    dut.ui_in.value = 0
+    await ClockCycles(dut.clk, 60)
+
+    assert dut.uo_out.value == 0x4D  # M
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    dut.ui_in.value = 1
+    await ClockCycles(dut.clk, 3)  # Punkt
+    dut.ui_in.value = 0
+    await ClockCycles(dut.clk, 2)
+
+    dut.ui_in.value = 1
+    await ClockCycles(dut.clk, 3)  # Punkt
+    dut.ui_in.value = 0
+    await ClockCycles(dut.clk, 2)
+
+    dut.ui_in.value = 1
+    await ClockCycles(dut.clk, 3)  # Punkt
+    dut.ui_in.value = 0
+    await ClockCycles(dut.clk, 60)
+
+    assert dut.uo_out.value == 0x53
+
+    
+    
+    dut.ui_in.value = 1
+    await ClockCycles(dut.clk, 15)  # Streck
+    dut.ui_in.value = 0
+    await ClockCycles(dut.clk, 2)
+
+    dut.ui_in.value = 1
+    await ClockCycles(dut.clk, 15)  # Streck
+    dut.ui_in.value = 0
+    await ClockCycles(dut.clk, 2)
+
+    dut.ui_in.value = 1
+    await ClockCycles(dut.clk, 15)  # Streck
+    dut.ui_in.value = 0
+    await ClockCycles(dut.clk, 60)
+
+    assert dut.uo_out.value == 0x4F
+    
+    
+    
+    
+    dut.ui_in.value = 1
+    await ClockCycles(dut.clk, 3)  # Punkt
+    dut.ui_in.value = 0
+    await ClockCycles(dut.clk, 2)
+
+    dut.ui_in.value = 1
+    await ClockCycles(dut.clk, 3)  # Punkt
+    dut.ui_in.value = 0
+    await ClockCycles(dut.clk, 2)
+
+    dut.ui_in.value = 1
+    await ClockCycles(dut.clk, 3)  # Punkt
+    dut.ui_in.value = 0
+    await ClockCycles(dut.clk, 60)
+
+    assert dut.uo_out.value == 0x53
+
+
+
+    # Test A  .-
+    dut.ui_in.value = 1
+    await ClockCycles(dut.clk, 3)
+    dut.ui_in.value = 0
+    await ClockCycles(dut.clk, 2)
+    
+    dut.ui_in.value = 1
+    await ClockCycles(dut.clk, 15)
+    dut.ui_in.value = 0
+    await ClockCycles(dut.clk, 60)
+
+    assert dut.uo_out.value == 0x41
+
+
+    dut.ui_in.value = 1
+    await ClockCycles(dut.clk, 15)  # Streck
+    dut.ui_in.value = 0
+    await ClockCycles(dut.clk, 2)
+
+    dut.ui_in.value = 1
+    await ClockCycles(dut.clk, 3)  # Punkt
+    dut.ui_in.value = 0
+    await ClockCycles(dut.clk, 2)
+
+    dut.ui_in.value = 1
+    await ClockCycles(dut.clk, 3)  # Punkt
+    dut.ui_in.value = 0
+    await ClockCycles(dut.clk, 2)
+
+    dut.ui_in.value = 1
+    await ClockCycles(dut.clk, 3)  # Punkt
+    dut.ui_in.value = 0
+    await ClockCycles(dut.clk, 60)
+
+    assert dut.uo_out.value == 0x42
+
+  
+    dut.ui_in.value = 1
+    await ClockCycles(dut.clk, 15)  # Streck
+    dut.ui_in.value = 0
+    await ClockCycles(dut.clk, 2)
+
+    dut.ui_in.value = 1
+    await ClockCycles(dut.clk, 3)  # Punkt
+    dut.ui_in.value = 0
+    await ClockCycles(dut.clk, 2)
+
+    dut.ui_in.value = 1
+    await ClockCycles(dut.clk, 15)  # Streck
+    dut.ui_in.value = 0
+    await ClockCycles(dut.clk, 2)
+
+    dut.ui_in.value = 1
+    await ClockCycles(dut.clk, 3)  # Punkt
+    dut.ui_in.value = 0
+    await ClockCycles(dut.clk, 60)
+
+    assert dut.uo_out.value == 0x43
+
     
     # The following assersion is just an example of how to check the output values.
     # Change it to match the actual expected output of your module:
